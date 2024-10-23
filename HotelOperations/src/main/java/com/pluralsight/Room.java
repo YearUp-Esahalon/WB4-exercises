@@ -35,25 +35,32 @@ public class Room {
         return (!this.isDirty() && !this.isOccupied());
     }
 
-    public boolean checkIn() {
+    public void checkIn() {
         if (isAvailable()) {
-            occupied = true;
-            dirty = true;
+            this.occupied = true;
+            this.dirty = true;
         } else
             System.out.println(" This Room is not available");
-        return false;
     }
 
-    public Boolean checkOut() {
-        if (occupied) {
-            occupied = false;
-            dirty = true;
+    public void checkOut() {
+        if (this.occupied) {
+            this.occupied = false;
+            this.dirty = true;
         } else {
             System.out.println(" Room is unoccupied");
         }
-        return null;
+    }
+    public void cleanRoom() {
+        if (this.dirty) {
+            this.dirty = false;
+        }else{
+            System.out.println("Room is already clean");
+        }
+
     }
 
 
-}
+    }
+
 
