@@ -23,7 +23,7 @@ public class RoomTest {
 
     @org.junit.Test
     public void testCheckOut() {
-        // create a new room object with the same properties utilizing same room parameter variables 
+        // create a new room object with the same properties utilizing same room parameter variables
         Room room = new Room(2,100.0, false, false);
 
         //check in room to change its state
